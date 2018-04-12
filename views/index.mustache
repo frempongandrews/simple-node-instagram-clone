@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    </head>
+
+    <body>
+
+
+        <!-- header-->
+        <header class="row">
+
+
+            <!-- header content-->
+            <div class="col-xs-12 container header-content">
+
+
+
+
+
+
+                <div class="col-xs-10  col-xs-offset-1 header-items-container">
+
+                    <div class="col-xs-4 header-item header-item-instagram">
+
+                    </div>
+
+                    <div class="col-xs-4 header-item header-item-search">
+
+                        <input type="text" name="username" placeholder="Search"/>
+
+                        <i class="fas fa-times"></i>
+                    </div>
+
+
+
+                    <div class="col-xs-4 header-item header-item-icons">
+
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+            <!-- end header content-->
+
+        </header>
+        <!-- end header-->
+
+
+
+
+        <!-- container-->
+        <div class="container">
+
+            <!-- profile row-->
+            <div class="row">
+
+                <div class="col-xs-12 container">
+
+
+
+                    <div class="col-xs-8 col-xs-offset-2 content-container">
+
+
+                        <!-- profile image container-->
+                        <div class="col-xs-4 profile-image-container">
+
+                            <div class="profile-image">
+                                <img />
+                            </div>
+
+                        </div>
+                        <!-- end profile image container-->
+
+
+
+
+                        <!-- profile details-->
+                        <div class="col-xs-8 profile-details-container">
+
+                            <div class="section-top">
+                                <div><span>{{user.username}}</span> <button>Edit Profile</button> <button>gear icon</button></div>
+                            </div>
+
+                            <div class="posts-follows-data">
+                                <p><span>61 posts</span> <span>following {{user.edge_followed_by.count}}</span> <span>followers{{user.edge_followed_by.count}}</span></p>
+                            </div>
+
+                            <!-- bio -->
+                            <div class="bio-section">
+
+                                <p>
+                                    Lusso Africano->African Luxury 👉Best African's fashion + modern 🇮🇹 style 👉Premium Handmade clothing 👉made UK & Ghana 👉Coming soon - Follow us & like us on Fb 😘
+                                </p>
+
+                            </div>
+                            <!-- end bio-->
+
+
+
+                        </div>
+                        <!-- end profile details-->
+                    </div>
+                    <!-- end content container -->
+
+                </div>
+
+
+            </div>
+            <!-- end profile row-->
+
+
+
+
+            <!-- images row-->
+
+            <div class="row">
+
+                <!-- images-items-container -->
+                <div class="col-xs-12 container  images-items-container">
+
+                    <div class="col-xs-10 col-xs-offset-1">
+
+                        {{#user.edge_owner_to_timeline_media.edges}}
+                            <div class="col-xs-4 image"> <img src="{{node.thumbnail_src}}" width="100%" />   </div>
+                        {{/user.edge_owner_to_timeline_media.edges}}
+
+
+                    </div>
+
+                </div>
+                <!-- end images-items-container -->
+
+            </div>
+            <!-- end images row-->
+
+        </div>
+        <!-- end container-->
+
+        <!-- font awesome cdn-->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    </body>
+
+</html>

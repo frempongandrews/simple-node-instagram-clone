@@ -1,0 +1,25 @@
+{
+  "name": "03-instagram-clone",
+  "version": "0.0.0",
+  "server": false,
+  "private": true,
+  "scripts": {
+    "test": "",
+    "build": ""
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "nodemon": "^1.17.1",
+    "superagent": "^3.8.2",
+    "turbo360": "latest",
+    "vertex360": "latest"
+  },
+  "devDependencies": {
+    "express": "latest",
+    "rimraf": "^2.6.2"
+  },
+  "deploy": [
+    "."
+  ],
+  "format": "vertex"
+}
