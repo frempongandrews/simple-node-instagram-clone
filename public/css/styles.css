@@ -8,10 +8,10 @@ body{
 
 
 header{
-    height: 100px;
+    height: 80px;
     background-color: #ffffff;
     position: relative;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
 }
 
 .header-content{
@@ -41,10 +41,18 @@ header{
 }
 
 .header-item-instagram {
-    background: url('/images/instagram-logo.png');
-    background-repeat: no-repeat;
-    background-position: center ;
+    /*background: url('/images/instagram-logo.png');*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center ;*/
     /*background-size: 100px 50px;*/
+    position: relative;
+}
+
+.header-item-instagram img{
+    position: absolute;
+    top: 0;
+    left: 15%;
+
 }
 
 .header-item-search{
@@ -53,12 +61,18 @@ header{
 
 }
 
+.header-item-search img{
+    position: absolute;
+    left: 20%;
+    top: 40%;
+}
 
 
 .header-item-search input{
     width: 60%;
-    position: relative;
-    bottom: -15px;
+    position: absolute;
+    top: 15px;
+    left: 0;
     height: 25px;
     display: block;
     margin: 0 auto;
@@ -97,15 +111,21 @@ header{
 
 
 
-.header-item-search input[type="text"]:focus {
-    background-image: url('/images/search-icon.png'),
-    url('/images/cancel-icon.png');
-    background-repeat: no-repeat;
-    background-position: 10px, 100%;
+.header-item-search input[type="text"]:focus+img{
+    /*background-image: url('/images/search-icon.png'),*/
+    /*url('/images/cancel-icon.png');*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 10px, 100%;*/
     /*using font-awesome cancel icon for now---> hiding
     second background image by setting size 0px 0px*/
-    background-size: 15px 15px, 0px 0px;
-    padding-left: 10%;
+    /*background-size: 15px 15px, 0px 0px;*/
+    /*padding-left: 10%;*/
+    left: 2%;
+}
+
+/*positioning placeholder text when on focus*/
+.header-item-search input[type="text"]:focus{
+    padding-left: 8%;
 }
 
 .fa-times{
@@ -149,14 +169,23 @@ header{
 }
 
 .profile-image{
+    position: relative;
     width: 150px;
     height: 150px;
     /*background-color: red;*/
     transform: translateY(50%);
     margin-left: auto;
     margin-right: auto;
+
+
+}
+
+.profile-image img{
     border-radius: 50%;
-    border: 2px solid black;
+    border: 1px solid #ededed;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .profile-image:after{
@@ -197,4 +226,74 @@ header{
     content: "";
     display: block;
     padding-bottom: 100%;
+}
+
+/*error page*/
+
+
+.error-container h3{
+    text-align: center;
+    margin-top: 80px;
+}
+
+.error-container p{
+    font-size: 1.6rem;
+    margin-top: 20px;
+}
+
+.error-container a{
+    text-decoration: none;
+}
+
+.header-profile-name{
+    text-align: center;
+    position: relative;
+    background-color: white;
+    top: 10px;
+    font-size: 1.6rem;
+
+}
+
+.error-page-container{
+    height: 80vh;
+
+}
+
+
+
+footer.footer-container{
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+
+
+}
+
+.footer-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+}
+
+
+
+.links-container{
+    /*padding-left: 10%;*/
+}
+
+.links-container a{
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #003569;
+}
+
+.instagram-copyright{
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
 }

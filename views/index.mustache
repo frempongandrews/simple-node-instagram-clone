@@ -26,13 +26,13 @@
                 <div class="col-xs-10  col-xs-offset-1 header-items-container">
 
                     <div class="col-xs-4 header-item header-item-instagram">
-
+                        <img src="https://lh3.googleusercontent.com/DD5ebCknPGFaNG0k3TkXQ26Ei6ZdGPD7okgMensvAJAP-_qhv49DoQhvVjYLhdVnSNrV7M_Bb4K_le2KdLXQ2D_k1w">
                     </div>
 
                     <div class="col-xs-4 header-item header-item-search">
 
                         <input type="text" name="username" placeholder="Search"/>
-
+                        <img src="https://lh3.googleusercontent.com/VA4-cvCGnazxhBdamyiOa5Wp38gLaI_fUSSLFneGZRrGx1sII_W_1B5P5aZVwV9T4iJMXBQcu000T5BkQq4aslkHkg" width="4%" height="auto"/>
                         <i class="fas fa-times"></i>
                     </div>
 
@@ -74,7 +74,7 @@
                         <div class="col-xs-4 profile-image-container">
 
                             <div class="profile-image">
-                                <img />
+                                <img src="{{user.profile_pic_url}}" width="100%" height="auto"/>
                             </div>
 
                         </div>
@@ -86,16 +86,16 @@
                         <!-- profile details-->
                         <div class="col-xs-8 profile-details-container">
 
-                            <div class="section-top">
+                            <div class="col-xs-8 section-top">
                                 <div><span>{{user.username}}</span> <button>Edit Profile</button> <button>gear icon</button></div>
                             </div>
 
-                            <div class="posts-follows-data">
-                                <p><span>61 posts</span> <span>following {{user.edge_followed_by.count}}</span> <span>followers{{user.edge_followed_by.count}}</span></p>
+                            <div class="col-xs-8 posts-follows-data">
+                                <p><span>{{user.edge_owner_to_timeline_media.count}} posts</span> <span>{{user.edge_followed_by.count}} following </span> <span>{{user.edge_follow.count}} followers</span></p>
                             </div>
 
                             <!-- bio -->
-                            <div class="bio-section">
+                            <div class="col-xs-12 bio-section">
 
                                 <p>
                                     Lusso Africano->African Luxury 👉Best African's fashion + modern 🇮🇹 style 👉Premium Handmade clothing 👉made UK & Ghana 👉Coming soon - Follow us & like us on Fb 😘
